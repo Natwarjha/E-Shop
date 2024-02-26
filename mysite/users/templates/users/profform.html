@@ -1,0 +1,18 @@
+{% extends 'Eshop/base.html' %}\
+{% load static %}
+
+{% block body %}
+<link rel="stylesheet" href="{% static 'Eshop/style.css' %}">
+<div class="login">
+    <div class="form">
+        <form enctype="multipart/form-data" method="POST">
+            {% csrf_token %}
+            
+            {{ form }}
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}

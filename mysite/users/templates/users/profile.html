@@ -1,0 +1,61 @@
+{% extends 'Eshop/base.html' %}
+{% load static %}
+{% block body %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'Eshop/style.css' %}">
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 offset-md-4 mt-4">
+            <div class="card">
+                <div class="card-header text-white bg-success">
+                    <div class="cad-title"> 
+                        Logout
+                    
+                    </div>
+
+                </div>
+                <div class="card-body">
+
+                    <h1>{{ prof_id }}</h1>
+                    <h3>{{ user.first_name }}</h3>
+                    <h3>{{ user.last_name }}</h3>
+                    <h3>{{ user.profile.location }}</h3>
+                    <img src="{{ prof.image.url }}" class="image">
+
+                    <br><br><br>
+
+                    <a href="{% url 'profform' prof.id %}" class="btn btn-primary">Edit</a>
+                    
+
+                </div>
+            </div>
+
+
+           
+
+        </div>
+
+    </div>
+</div>
+
+
+
+<!-- <div class="login">
+    <div class="form">
+        <h1>{{ prof_id }}</h1>
+        <h3>{{ user.first_name }}</h3>
+        <h3>{{ user.last_name }}</h3>
+        <h3>{{ user.profile.location }}</h3>
+        <img src="{{ prof.image.url }}" class="image">
+
+        <br><br><br>
+
+        <a href="{% url 'profform' prof.id %}" class="btn btn-primary">Edit</a>
+
+    </div>
+</div> -->
+
+
+{% endblock %}

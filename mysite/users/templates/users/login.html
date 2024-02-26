@@ -1,0 +1,35 @@
+{% extends 'Eshop/base.html' %}
+{% load static %}
+
+{% block body %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'Eshop/style.css' %}">
+
+
+
+<div class="login">
+    <div class="form">
+
+        <form method="POST" class="jumbotron">
+            {% csrf_token %} 
+
+            <label for="user">Username</label><br>
+            <input type="text" placeholder="username" class="container" id="user" name="username"><br>
+            <h5>OR</h5>
+        
+            <label for="email">Email:</label><br>
+            <input type="text" placeholder="Email" class="container" id="email" name="email"><br>
+        
+        
+            <label for="pass">Password</label><br>
+            <input type="password" placeholder="password" class="container" id="pass" name="password"><br>
+        
+            <!-- <strong>Login Page</strong> -->
+        
+            <button type="submit">Login</button>
+        </form>
+
+    </div>
+</div>
+{% endblock %}
+
